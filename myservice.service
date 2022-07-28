@@ -1,0 +1,14 @@
+[Unit]
+Description=Name/function of this service
+#After=network.target
+
+[Service]
+User=root
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/sh /opt/myscript.sh start
+ExecStop=/bin/sh /opt/myscript.sh stop
+
+[Install]
+WantedBy=default.target
+
